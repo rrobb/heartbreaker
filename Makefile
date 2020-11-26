@@ -14,3 +14,6 @@ start:
 
 ssh:
 	@docker exec -ti hearts /bin/bash
+
+run:
+	@docker exec -ti hearts php -r 'include("run.php");'
