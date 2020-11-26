@@ -17,3 +17,12 @@ ssh:
 
 run:
 	@docker exec -ti hearts php -r 'include("run.php");'
+
+all-tests:
+	@docker exec -ti hearts ./vendor/bin/phpunit
+
+unit-tests:
+	@docker exec -ti hearts ./vendor/bin/phpunit --testsuite unit
+
+integration-tests:
+	@docker exec -ti hearts ./vendor/bin/phpunit --testsuite integration
