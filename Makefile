@@ -8,6 +8,7 @@ help:
 
 build:
 	@docker-compose build
+	@docker run -it --rm -v `pwd`:/app composer install
 
 start:
 	@docker-compose up
