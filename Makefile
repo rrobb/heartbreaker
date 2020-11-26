@@ -26,3 +26,6 @@ unit-tests:
 
 integration-tests:
 	@docker exec -ti hearts ./vendor/bin/phpunit --testsuite integration
+
+functional-tests:
+	@docker exec -ti hearts ./vendor/bin/phpunit --testsuite functional

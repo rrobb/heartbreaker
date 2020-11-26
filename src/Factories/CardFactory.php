@@ -38,7 +38,7 @@ class CardFactory
         $stack = [];
         foreach (self::SUITS as $suit) {
             $values = self::VALUES;
-            while($values) {
+            while ($values) {
                 array_push(
                     $stack,
                     new Card(
