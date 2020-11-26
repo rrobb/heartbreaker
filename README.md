@@ -22,6 +22,7 @@ All to be run in a separate terminal window:
   - Run `make all-tests` to run all available tests
   - Run `make unit-tests` to run the unit tests
   - Run `make integration-tests` to run the integration tests
+  - Run `make functional-tests` to run the functional tests
 
 ## Info
 The main entrypoint is through `Heartbreaker\Controllers\GameLogic->gameLoop()`.
