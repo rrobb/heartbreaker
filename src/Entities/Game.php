@@ -6,6 +6,7 @@ namespace Heartbreaker\Entities;
 /**
  * Class Game
  * @package Heartbreaker\Entities
+ * @codeCoverageIgnore
  */
 class Game
 {

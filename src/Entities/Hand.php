@@ -10,6 +10,7 @@ use Iterator;
 /**
  * Class Hand
  * @package Heartbreaker\Entities
+ * @codeCoverageIgnore
  */
 class Hand implements ArrayAccess, Countable, Iterator
 {

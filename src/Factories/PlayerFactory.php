@@ -10,6 +10,7 @@ use Sabre\Event\Emitter;
 /**
  * Class PlayerFactory
  * @package Heartbreaker\Factories
+ * @codeCoverageIgnore
  */
 class PlayerFactory
 {

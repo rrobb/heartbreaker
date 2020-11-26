@@ -6,6 +6,7 @@ namespace Heartbreaker\Entities;
 /**
  * Class Card
  * @package Heartbreaker\Entities
+ * @codeCoverageIgnore
  */
 class Card
 {

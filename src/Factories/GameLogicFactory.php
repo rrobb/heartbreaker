@@ -17,6 +17,7 @@ use Sabre\Event\Emitter;
 /**
  * Class GameLogicFactory
  * @package Heartbreaker\Factories
+ * @codeCoverageIgnore
  */
 class GameLogicFactory
 {

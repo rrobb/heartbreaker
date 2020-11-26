@@ -8,6 +8,7 @@ use Heartbreaker\Entities\Card;
 /**
  * Class CardFactory
  * @package Heartbreaker\Factories
+ * @codeCoverageIgnore
  */
 class CardFactory
 {

@@ -9,6 +9,7 @@ use Sabre\Event\Emitter;
 /**
  * Class Player
  * @package Heartbreaker\Entities
+ * @codeCoverageIgnore
  */
 class Player
 {
