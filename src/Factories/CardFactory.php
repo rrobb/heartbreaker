@@ -5,6 +5,10 @@ namespace Heartbreaker\Factories;
 
 use Heartbreaker\Entities\Card;
 
+/**
+ * Class CardFactory
+ * @package Heartbreaker\Factories
+ */
 class CardFactory
 {
     public const SUITS = [
@@ -13,7 +17,6 @@ class CardFactory
         '♦',
         '♣',
     ];
-
     public const VALUES = [
         ['name' => '7', 'value' => 7],
         ['name' => '8', 'value' => 8],

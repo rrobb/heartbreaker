@@ -3,10 +3,25 @@ declare(strict_types = 1);
 
 namespace Heartbreaker\Entities;
 
+/**
+ * Class Card
+ * @package Heartbreaker\Entities
+ */
 class Card
 {
+    /**
+     * @var string
+     */
     private string $suit;
+
+    /**
+     * @var int|mixed
+     */
     private int $value;
+
+    /**
+     * @var mixed|string
+     */
     private string $name;
 
     /**

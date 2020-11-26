@@ -1,14 +1,16 @@
 <?php
 declare(strict_types = 1);
 
-namespace Heartbreaker;
+namespace Heartbreaker\Controllers;
 
 use Heartbreaker\Entities\Card;
+use Heartbreaker\Entities\Player;
 
 class GameRules
 {
     public const FIRST_PLAYER = 0;
     public const LOSING_SCORE = 50;
+    public const MAX_CARDS_IN_HAND = 8;
 
     /**
      * Return the number of points the given card is worth according to the business rules.
@@ -32,25 +34,27 @@ class GameRules
         ) {
             return 5;
         }
+
         return 0;
     }
 
     /**
      * Business rule: The first card of the round determines the current suit to be played.
-     * @param array $cardsPlayed
-     * @return mixed
+     * @param Card[] $cardsPlayed
+     * @return string
      */
     public static function currentSuit(array $cardsPlayed): string
     {
-        return ($cardsPlayed[0])->getSuit();
+        return $cardsPlayed[0]->getSuit();
     }
 
     /**
-     * Returns the losing score.
-     * @return int
+     * If the most recent losing player exceeds the maximum allowed amount of points, they lose and the game is over.
+     * @param Player $player
+     * @return bool
      */
-    public static function losingScore()
+    public static function checkIfGameOver(Player $player): bool
     {
-        return self::LOSING_SCORE;
+        return $player->getPoints() >= self::LOSING_SCORE;
     }
 }

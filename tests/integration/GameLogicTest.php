@@ -1,57 +1,22 @@
 <?php
 declare(strict_types = 1);
 
-use Heartbreaker\GameLogic;
+namespace Tests\Integration;
+
+use Heartbreaker\Factories\GameLogicFactory;
 use PHPUnit\Framework\TestCase;
+use Sabre\Event\Emitter;
 
 class GameLogicTest extends TestCase
 {
-
-    public function testShuffleDeck()
-    {
-    }
-
     /**
+     * Asserts that the game loop returns a Player object with a score of 50 or higher
      * @group play
      */
-    public function testPlayGame()
+    public function testGameLoop()
     {
-        $result = (new GameLogic())->playGame();
-    }
-
-    public function testGetRoundPoints()
-    {
-    }
-
-    public function testSetupGameWorld()
-    {
-    }
-
-    public function testGetLoserOfRound()
-    {
-    }
-
-    public function testCheckIfGameOver()
-    {
-    }
-
-    public function testPickWorstCardPlayed()
-    {
-    }
-
-    public function testRandomizeSeatOrder()
-    {
-    }
-
-    public function testDealCards()
-    {
-    }
-
-    public function testContinueWithNextPlayer()
-    {
-    }
-
-    public function testPlayRound()
-    {
+        $gameLogic = GameLogicFactory::createGameLogic(new Emitter());
+        $loser = $gameLogic->gameLoop();
+        $this->assertGreaterThanOrEqual(50, $loser->getPoints());
     }
 }
