@@ -12,6 +12,9 @@ build:
 start:
 	@docker-compose up
 
+down:
+	@docker-compose down
+
 ssh:
 	@docker exec -ti hearts /bin/bash
 
