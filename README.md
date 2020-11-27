@@ -10,6 +10,7 @@ How the fellas lay their money down
 A simple Heartbreak game.
 
 ## Installation
+- The installation procedure assumes the presence of [Docker](https://www.docker.com/get-started)
 - Pull the *heartbreaker* repo
 - Open a terminal window and move to the install directory
 - Run `make build` to build the container
